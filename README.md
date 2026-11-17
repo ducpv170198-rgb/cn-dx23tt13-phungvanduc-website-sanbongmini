@@ -7,7 +7,7 @@ Hệ thống quản lý và đặt lịch thuê sân bóng đá mini trực tuy�
 ## 1. Thông tin sinh viên thực hiện
 * **Họ và tên:** Phùng Văn Đức
 * **Mã lớp:** DX23TT13
-* **Giảng viên hướng dẫn:** Nguyễn Nhứt Lam
+* **Giảng viên hướng dẫn:** TS.Nguyễn Nhứt Lam
 * **Loại đồ án:** Thực tập Đồ án chuyên ngành
 * **Repository:** [cn-dx23tt13-phungvanduc-website-sanbongmini](https://github.com/ducpv170198-rgb/cn-dx23tt13-phungvanduc-website-sanbongmini)
 
