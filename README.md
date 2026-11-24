@@ -118,4 +118,4 @@ Lưu ý về `kiemthu.php`:
 
 ## Giới hạn hiện tại
 
-Chưa có cổng thanh toán tự động/đối soát ngân hàng, chưa hỗ trợ đặt sân qua nửa đêm và nhiều cơ sở. Hiệu năng mới đo ở mức HTTP Kernel, không qua mạng.
+Chưa có cổng thanh toán tự động/đối soát ngân hàng. Hiệu năng mới đo ở mức HTTP Kernel, không qua mạng.
