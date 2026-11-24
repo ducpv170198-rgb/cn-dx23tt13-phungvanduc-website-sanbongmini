@@ -38,6 +38,7 @@ resources/js/vue           Giao diện Vue
 routes/api.php             Định nghĩa endpoint
 tests/Feature              PHPUnit
 tests/frontend             Kiểm thử JavaScript
+docs/kiemthu               Log kiểm thử được công bố
 kiemthu.php                Kiểm thử tích hợp MySQL (đồng thời, hiệu năng)
 progress-report/           Báo cáo tiến độ hằng tuần
 ```

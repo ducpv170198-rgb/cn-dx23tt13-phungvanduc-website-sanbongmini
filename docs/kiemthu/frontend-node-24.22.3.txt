@@ -1,0 +1,56 @@
+JavaScript frontend test run
+Date: 2026-11-24
+Platform: Linux-6.18.57-x86_64-with-glibc2.41
+Node.js: v24.22.3
+Repository: https://github.com/ducpv170198-rgb/cn-dx23tt13-phungvanduc-website-sanbongmini
+Source commit: 317921e961ad64f998b8eaedc29eb3fa2f8e8eac
+Command: npm run test:frontend
+Exit code: 0
+
+--- output ---
+
+> test:frontend
+> node --test
+
+✔ lifecycle before (1.372423ms)
+✔ lifecycle start (0.158048ms)
+✔ lifecycle during paid (0.125138ms)
+✔ lifecycle end (0.160131ms)
+✔ lifecycle deposit (0.131597ms)
+✔ lifecycle paid (0.13962ms)
+✔ lifecycle cancelled (0.097346ms)
+✔ lifecycle pending (0.103396ms)
+✔ lifecycle missing invoice (0.174513ms)
+✔ lifecycle refund (0.257767ms)
+✔ lifecycle invalid time (0.131718ms)
+✔ before (1.513856ms)
+✔ exact (0.325409ms)
+✔ after (0.245499ms)
+✔ pending (0.219059ms)
+✔ completed (0.250056ms)
+✔ cancelled (0.196155ms)
+✔ missing (0.222835ms)
+✔ ngày sử dụng sân hiển thị dd/mm/yyyy từ ngày giờ MySQL (0.996438ms)
+✔ hỗ trợ datetime ISO của API (0.204527ms)
+✔ không phụ thuộc vào múi giờ của trình duyệt (0.150356ms)
+✔ khung giờ hiển thị từ giờ bắt đầu và kết thúc (0.249696ms)
+✔ không có dữ liệu thì hiển thị ký hiệu rỗng (0.171368ms)
+✔ cộng 30 phút giữ định dạng SQL (1.202377ms)
+✔ cộng 90 phút từ 19:30 (0.237376ms)
+✔ từ chối giờ không thuộc cùng ngày (0.347462ms)
+✔ từ chối chuỗi ngày giờ không hợp lệ (0.206971ms)
+✔ kiểm tra 90 phút gồm ba ô liên tiếp (0.365469ms)
+✔ chặn trùng lịch/ô không có giá và không khả dụng (0.187452ms)
+✔ không nhầm lẫn sân khác (0.196776ms)
+✔ kiểm tra số ngày tháng nhuận cho báo cáo (0.863018ms)
+✔ định dạng tiền Việt Nam (17.934335ms)
+✔ ngày theo múi giờ Việt Nam (4.099654ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 181.424179
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
