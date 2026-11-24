@@ -12,6 +12,8 @@ Kết quả tổng hợp, môi trường chạy và lệnh tái lập được t
 
 Bản ghi JSON gốc của lần chạy MySQL không có trong hồ sơ hiện lưu trữ. Tệp tổng hợp công bố các số liệu được ghi nhận, không phải bản sao của log JSON.
 
-## Phạm vi
+## Phạm vi và nghiệm thu kịch bản
 
-Các ca JavaScript kiểm tra tiện ích và vòng đời giao diện; chúng không thay thế kiểm thử API hoặc E2E. Phép đo tải API được thực hiện qua Laravel HTTP Kernel, không qua máy chủ web hoặc mạng. Tình trạng nghiệm thu 28 kịch bản nghiệp vụ được đối chiếu trong báo cáo, Phụ lục C.
+Kết quả kiểm thử thành phần được tổng hợp riêng với nghiệm thu kịch bản nghiệp vụ. Tại thời điểm cập nhật, 0/28 kịch bản Phụ lục C có đầy đủ bằng chứng nghiệm thu: 14 ca chưa chạy, 6 ca mới có bằng chứng liên quan, 8 ca có kết quả kiểm thử tự động ở một phần chức năng nhưng chưa kiểm chứng đầy đủ theo kịch bản. Các luồng báo giá (TC03–TC04), tồn kho không đủ (TC10), ngưỡng cọc (TC11–TC12), xác nhận đơn (TC13–TC14), chuỗi đặt trùng (TC23) và chống leo thang quyền (TC26) chưa chạy.
+
+Các ca JavaScript kiểm tra tiện ích và vòng đời giao diện; chúng không thay thế kiểm thử API hoặc E2E. Phép đo tải API được thực hiện qua Laravel HTTP Kernel, không qua máy chủ web hoặc mạng. Không coi các kết quả này là nghiệm thu đầu cuối.
