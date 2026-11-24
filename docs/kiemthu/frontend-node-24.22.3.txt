@@ -3,7 +3,8 @@ Date: 2026-11-24
 Platform: Linux-6.18.57-x86_64-with-glibc2.41
 Node.js: v24.22.3
 Repository: https://github.com/ducpv170198-rgb/cn-dx23tt13-phungvanduc-website-sanbongmini
-Source commit: 317921e961ad64f998b8eaedc29eb3fa2f8e8eac
+Test checkout commit (local): 317921e961ad64f998b8eaedc29eb3fa2f8e8eac
+Published equivalent commit (identical source tree): 05ffeb59fa0edbdad4342beec1d6fba4479e9c77
 Command: npm run test:frontend
 Exit code: 0
 
