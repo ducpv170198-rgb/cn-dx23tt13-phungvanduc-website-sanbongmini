@@ -5,7 +5,7 @@
 * **Mã lớp:** DX23TT13
 * **Tên đồ án:** Website Đặt Sân Bóng Mini
 * **Giảng viên hướng dẫn:** Nguyễn Nhứt Lam
-* **Giai đoạn:** 17/11/2026 – 24/11/2026
+* **Giai đoạn:** 23/11/2026 – 29/11/2026
 
 ## 2. Công việc đã thực hiện trong tuần
 * [x] Xây dựng backend Laravel 12: REST API, Sanctum, phân quyền admin/staff/customer.
