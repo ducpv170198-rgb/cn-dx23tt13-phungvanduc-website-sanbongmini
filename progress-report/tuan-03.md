@@ -1,6 +1,6 @@
 # Báo cáo tiến độ tuần 03
 
-**Ngày cập nhật:** 24/11/2026  
+**Thời gian:** 30/11/2026 - 06/12/2026  
 **Đề tài:** Xây dựng website đặt sân bóng đá mini
 
 ## Công việc đã thực hiện
