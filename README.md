@@ -1,66 +1,121 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Website đặt sân bóng đá mini
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Đồ án thực tập chuyên ngành – Khoa Công nghệ thông tin, Trường Đại học Trà Vinh.
 
-## About Laravel
+| | |
+|---|---|
+| Sinh viên | Phùng Văn Đức – MSSV 170123795 – Lớp DX23TT13 (khóa 2023–2027) |
+| Giảng viên hướng dẫn | TS. Nguyễn Nhứt Lam |
+| Thời gian thực hiện | 15/11/2026 – 03/01/2027 |
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Giới thiệu
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Hệ thống giúp một cụm sân bóng mini (sân 5 và sân 7) quản lý đặt sân trực tuyến: xem lịch trống theo lưới 30 phút, báo giá theo khung giờ, đặt cọc qua VietQR, thu/hoàn tiền, quản lý dịch vụ – tồn kho, thống kê doanh thu và tìm đối giao hữu.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Điểm nhấn kỹ thuật:
+- Chống đặt trùng bằng giao dịch cơ sở dữ liệu và khóa dòng sân (`lockForUpdate`).
+- Tính giá phía máy chủ (theo khung giờ, ngày thường/cuối tuần); tiền lưu bằng số nguyên VND.
+- Ghi nhận thanh toán lũy đẳng (`idempotency_key`); hoàn lại tồn kho đúng một lần khi hủy đơn.
+- Đặt sân cố định hằng tuần (tối đa 52 tuần) theo nguyên tắc "tất cả hoặc không gì cả".
+- Email thông báo qua hàng đợi; phân quyền `customer` / `staff` / `admin`.
 
-## Learning Laravel
+## Công nghệ
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Backend: PHP, Laravel 12, REST API, Laravel Sanctum (bearer token), MySQL
+- Frontend: Vue 3, Vue Router 4, Axios, Vite (SPA tại đường dẫn `/app`)
+- Kiểm thử: PHPUnit 11, `node:test`, script tích hợp MySQL `kiemthu.php`
+- Môi trường phát triển: Laragon (Windows)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Cấu trúc thư mục chính
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```
+app/Http/Controllers/Api   Các controller REST API
+app/Services               Tính giá, gửi email đặt sân
+app/Console/Commands       Lệnh artisan (hoàn tất đơn, nhắc lịch, tạo admin)
+database/migrations        Lược đồ CSDL
+database/seeders           Dữ liệu mẫu (sân, bảng giá, dịch vụ)
+resources/js/vue           Giao diện Vue
+routes/api.php             Định nghĩa endpoint
+tests/Feature              PHPUnit
+tests/frontend             Kiểm thử JavaScript
+kiemthu.php                Kiểm thử tích hợp MySQL (đồng thời, hiệu năng)
+progress-report/           Báo cáo tiến độ hằng tuần
+```
 
-## Laravel Sponsors
+## Yêu cầu
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+PHP 8.4+ (kèm `pdo_mysql`), Composer, Node.js 20+, MySQL 8.
 
-### Premium Partners
+## Cài đặt
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+```bash
+git clone https://github.com/ducpv170198-rgb/cn-dx23tt13-phungvanduc-website-sanbongmini.git
+cd cn-dx23tt13-phungvanduc-website-sanbongmini
 
-## Contributing
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Tạo CSDL `sanbong_mini` trong MySQL, chỉnh `DB_*` trong `.env`, rồi:
 
-## Code of Conduct
+```bash
+php artisan migrate --seed
+npm run build        # hoặc: npm run dev
+php artisan serve
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Mở `http://127.0.0.1:8000/app`. Với Laragon, có thể dùng mẫu `LARAGON_VHOST.conf.example`.
 
-## Security Vulnerabilities
+### Cấu hình VietQR
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Điền trong `.env` (nếu thiếu, API mã QR trả 503):
 
-## License
+```
+FIELDLY_BANK_BIN=
+FIELDLY_BANK_ACCOUNT=
+FIELDLY_BANK_ACCOUNT_NAME=
+FIELDLY_DEPOSIT_THRESHOLD_VND=500000
+FIELDLY_DEPOSIT_AMOUNT_VND=100000
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Tài khoản quản trị
+
+```bash
+php artisan sanbong:create-admin email@example.com
+```
+
+Lệnh tạo tài khoản quản lý; mật khẩu không được lưu trong mã nguồn.
+
+### Hàng đợi và lịch chạy
+
+Mặc định `QUEUE_CONNECTION=sync`, `MAIL_MAILER=log`. Khi triển khai thật, dùng `database` và chạy:
+
+```bash
+php artisan queue:work
+php artisan schedule:work     # tự động chuyển đơn đã thanh toán đủ sang "hoàn tất"
+```
+
+## Chạy kiểm thử
+
+```bash
+php artisan test              # PHPUnit: 21 ca (6 lớp Feature test)
+node --test tests/frontend    # JavaScript: 33 ca
+php kiemthu.php               # tích hợp MySQL: đặt trùng đồng thời, lũy đẳng, hoàn kho, phân quyền, hiệu năng
+```
+
+Lưu ý về `kiemthu.php`:
+- Chạy tại thư mục gốc dự án, cần MySQL cục bộ và `DB_CONNECTION=mysql` trong `.env`.
+- Script tạo cơ sở dữ liệu riêng `fieldly_qa_<mã lần chạy>`, không đụng đến CSDL đang dùng.
+- Kết quả ghi vào `kiemthu_ketqua/<mã lần chạy>/ketqua.json` (thư mục này không được commit).
+- Kết quả chạy chính thức của đồ án được lưu tại `docs/kiemthu/` (xem báo cáo, Phụ lục D).
+
+## Quy ước làm việc
+
+- Commit nhỏ, theo Conventional Commits: `feat:`, `fix:`, `test:`, `docs:`, `refactor:`, `chore:`.
+- Báo cáo tiến độ hằng tuần: `progress-report/tuan-XX.md`.
+
+## Giới hạn hiện tại
+
+Chưa có cổng thanh toán tự động/đối soát ngân hàng, chưa hỗ trợ đặt sân qua nửa đêm và nhiều cơ sở. Hiệu năng mới đo ở mức HTTP Kernel, không qua mạng.
