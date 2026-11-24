@@ -1,0 +1,8 @@
+<VirtualHost *:80>
+    ServerName sanbong-mini.test
+    DocumentRoot "C:/laragon/www/sanbong-mini/public"
+    <Directory "C:/laragon/www/sanbong-mini/public">
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
