@@ -1,8 +1,0 @@
-BAN VA CHAY KIEM THU - sanbong-mini(8)
-1. Sao luu du an va MySQL. Giai nen ZIP, chep cac thu muc va kiemthu.php vao goc du an, ghi de file trung ten. Khong ghi de .env.
-2. Laragon Start All, Terminal tai thu muc du an. Chay php artisan migrate (khong dung migrate:fresh). Migration se dung neu co owner mo coi; khong tu xoa du lieu.
-3. Chay php kiemthu.php. Script tao DB fieldly_qa_* rieng, giu lai de doi chieu. 14 ca du kien, khong phai ket qua da chay. Chup Terminal, gui ketqua.json moi va log neu loi. Khong chia se token/.env.
-4. PHPUnit: chi chay tren DB QA rieng da migrate. Trong PowerShell: $env:DB_DATABASE='fieldly_qa_...'; $env:DB_CONNECTION='mysql'; $env:DB_URL=''; $env:APP_CONFIG_CACHE="$PWD/qa-unused-config.php"; php artisan test. Thay ... bang ten DB QA vua tao; khong chay tren DB website. Dong terminal sau khi xong. Chup ket qua. 
-5. npm run test:frontend. Neu can build lai: npm ci; npm run build. CSS build hien tai da duoc cap nhat de co the thu ngay, chua kiem chung bang trinh duyet. F12, device toolbar, 390px, kiem tra tat ca tab quan tri. Bang rong duoc cuon trong khung, khong cuon ngang toan trang.
-6. Git: commit cac file nguon va kiemthu.php; ghi git rev-parse HEAD. Khong commit .env, DB dump, token, worker logs chua ra soat. Luu ketqua.json da ra soat va anh Terminal cung minh chung. 
-7. Chay msinfo32 de ghi CPU, RAM, OS. Chua co du lieu khao sat, khong tu dien.
