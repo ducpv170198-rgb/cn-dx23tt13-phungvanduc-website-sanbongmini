@@ -15,7 +15,7 @@
 * [x] Cài đặt đặt cọc VietQR, ghi nhận thu/hoàn tiền lũy đẳng, hóa đơn, tồn kho dịch vụ.
 * [x] Xây dựng giao diện Vue 3 (đặt sân, đơn của tôi, giao hữu, quản trị).
 * [x] Viết 21 ca PHPUnit, 33 ca JavaScript và script tích hợp MySQL `kiemthu.php`.
-* [x] Mời giảng viên hướng dẫn làm Collaborator (chưa thực hiện – sẽ làm ngay).
+* [x] Mời giảng viên hướng dẫn làm Collaborator .
 
 ## 3. Kết quả kiểm thử
 * PHPUnit: 21 ca đạt; JavaScript: 33 ca đạt.
