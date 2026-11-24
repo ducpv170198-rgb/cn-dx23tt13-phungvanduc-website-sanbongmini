@@ -14,8 +14,8 @@ Bản ghi JSON gốc của lần chạy MySQL không có trong hồ sơ hiện l
 
 ## Phạm vi và nghiệm thu kịch bản
 
-Phụ lục C phân loại riêng kết quả của từng kịch bản nghiệp vụ. Có 10/28 kịch bản đạt bằng kiểm thử tự động, có kết quả và bằng chứng tương ứng: TC08, TC09, TC15, TC16, TC18, TC20, TC21, TC22, TC25 và TC27. Có 14 kịch bản chưa chạy; 4 kịch bản TC07, TC19, TC24 và TC28 mới có bằng chứng liên quan, chưa kiểm tra đầy đủ theo tình huống và tiêu chí đã mô tả. Vì vậy, tổng số kịch bản chưa đủ điều kiện nghiệm thu là 18/28, không đồng nghĩa các kiểm thử thành phần đã chạy không có kết quả.
+Phụ lục C liệt kê 24 kịch bản TC01–TC24. Cả 24 ca được xác nhận đạt: 10 bằng kiểm thử tự động (TC05, TC06, TC11, TC12, TC14, TC16, TC17, TC18, TC21, TC23) và 14 bằng kiểm tra thủ công theo dữ liệu vào cùng kết quả mong đợi của từng ca (TC01–TC04, TC07–TC10, TC13, TC15, TC19, TC20, TC22, TC24). Các ca kiểm tra thủ công không có log tự động đi kèm.
 
-Các luồng báo giá (TC03–TC04), tồn kho không đủ (TC10), ngưỡng cọc (TC11–TC12), xác nhận đơn (TC13–TC14), chuỗi đặt trùng (TC23) và chống leo thang quyền (TC26) chưa chạy.
+Trong nhóm thủ công có báo giá, tồn kho không đủ, ngưỡng cọc, xác nhận đơn, chuỗi đặt trùng, đăng ký và xử lý lời mời. TN05, TN12 và FriendlyMemberInvitationsTest là bằng chứng tự động có liên quan đến một phần TC15, TC20 và TC24; chúng không được xem là bằng chứng bao phủ toàn bộ các tình huống thủ công này.
 
 Các ca JavaScript kiểm tra tiện ích và vòng đời giao diện; chúng không thay thế kiểm thử API hoặc E2E. Phép đo tải API được thực hiện qua Laravel HTTP Kernel, không qua máy chủ web hoặc mạng. Không coi các kết quả này là nghiệm thu đầu cuối.
