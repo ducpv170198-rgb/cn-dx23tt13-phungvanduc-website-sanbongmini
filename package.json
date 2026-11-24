@@ -1,10 +1,13 @@
 {
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
-    "test:frontend": "node --test tests/frontend"
+    "test:frontend": "node --test"
   },
   "dependencies": {
     "vue": "^3.5.18",

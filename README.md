@@ -44,7 +44,7 @@ progress-report/           Báo cáo tiến độ hằng tuần
 
 ## Yêu cầu
 
-PHP 8.4+ (kèm `pdo_mysql`), Composer, Node.js 20+, MySQL 8.
+PHP 8.4+ (kèm `pdo_mysql`), Composer, Node.js 22+ và MySQL 8. Phiên bản Node tối thiểu được khai báo trong `package.json`.
 
 ## Cài đặt
 
@@ -101,7 +101,7 @@ php artisan schedule:work     # tự động chuyển đơn đã thanh toán đ�
 
 ```bash
 php artisan test              # PHPUnit: 21 ca (6 lớp Feature test)
-node --test tests/frontend    # JavaScript: 33 ca
+npm run test:frontend         # JavaScript: 4 file, 33 ca
 php kiemthu.php               # tích hợp MySQL: đặt trùng đồng thời, lũy đẳng, hoàn kho, phân quyền, hiệu năng
 ```
 
@@ -109,7 +109,8 @@ Lưu ý về `kiemthu.php`:
 - Chạy tại thư mục gốc dự án, cần MySQL cục bộ và `DB_CONNECTION=mysql` trong `.env`.
 - Script tạo cơ sở dữ liệu riêng `fieldly_qa_<mã lần chạy>`, không đụng đến CSDL đang dùng.
 - Kết quả ghi vào `kiemthu_ketqua/<mã lần chạy>/ketqua.json` (thư mục này không được commit).
-- Kết quả chạy chính thức của đồ án được lưu tại `docs/kiemthu/` (xem báo cáo, Phụ lục D).
+- Log kiểm thử đã công bố được lưu tại `docs/kiemthu/`; log JavaScript và phạm vi các bằng chứng còn thiếu được ghi trong README của thư mục này.
+- `kiemthu_ketqua/` vẫn là thư mục tạm bị Git bỏ qua. Khi cần nộp log PHP/MySQL, kiểm tra và sao chép đúng tệp của lần chạy cần công bố vào `docs/kiemthu/`, rồi commit tệp đó.
 
 ## Quy ước làm việc
 
