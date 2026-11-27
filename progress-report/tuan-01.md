@@ -1,6 +1,6 @@
 # Báo cáo Tiến độ Đồ án - Tuần 01
 
-## 1.Thông tin sinh viên
+## 1. Thông tin sinh viên
 * **Họ và tên:** Phùng Văn Đức
 * **Mã lớp:** DX23TT13
 * **Tên đồ án:** Website Đặt Sân Bóng Mini
