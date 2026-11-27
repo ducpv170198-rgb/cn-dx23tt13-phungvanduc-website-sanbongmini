@@ -1,31 +1,31 @@
-# Báo cáo tiến độ tuần 03
+# Báo cáo tiến độ Đồ án - Tuần 03
 
-**Thời gian:** 30/11/2026 - 06/12/2026  
-**Đề tài:** Xây dựng website đặt sân bóng đá mini
+## 1. Thông tin sinh viên
+* **Họ và tên:** Phùng Văn Đức
+* **Mã lớp:** DX23TT13
+* **Tên đồ án:** Website Đặt Sân Bóng Mini
+* **Giảng viên hướng dẫn:** Nguyễn Nhứt Lam
+* **Thời gian dự kiến:** 30/11/2026 – 06/12/2026
+## 2. Công việc dự kiến
 
-## Công việc đã thực hiện
+- Hoàn thiện README với yêu cầu môi trường, các bước cài đặt, cấu hình `.env`, tạo cơ sở dữ liệu và chạy dự án.
+- Bổ sung hướng dẫn chạy PHPUnit, kiểm thử JavaScript và script tích hợp MySQL.
+- Rà soát các kịch bản TC13–TC24 liên quan đến xác nhận đơn, thanh toán, hủy đơn, hoàn tiền và phân quyền.
+- Ghi lại dữ liệu đầu vào, kết quả mong đợi, kết quả thực tế và minh chứng cho từng ca đã thực hiện.
+- Kiểm tra lại giao diện quản trị ở kích thước màn hình rộng 390 px.
 
-- Rà soát nhánh `main` và đối chiếu README, mã nguồn, báo cáo kiểm thử cùng Phụ lục D.
-- Sửa lệnh kiểm thử JavaScript để `npm run test:frontend` hoạt động với Node.js 24; khai báo Node.js tối thiểu `>=22` trong `package.json`.
-- Chạy 4 tệp kiểm thử JavaScript trên Node.js 24.22.3: **33/33 ca đạt**. Log được lưu trong `docs/kiemthu/frontend-node-24.22.3.txt`.
-- Đối chiếu `routes/console.php`: lệnh hoàn tất đơn được đăng ký chạy mỗi phút và lệnh nhắc lịch được đăng ký chạy mỗi 5 phút. Chưa xác nhận việc Scheduler và SMTP hoạt động đầu cuối.
-- Chuẩn hóa Phụ lục C còn 24 kịch bản TC01–TC24. Theo kết quả người thực hiện xác nhận, 10 ca đạt bằng kiểm thử tự động và 14 ca đạt bằng kiểm tra thủ công theo tiêu chí của từng ca.
-- Cập nhật phần tổng kết và ma trận yêu cầu để dùng cùng mã TC với Phụ lục C.
+## 3. Kết quả cần đạt
 
-## Tồn tại
+- README có thể dùng để cài đặt và chạy dự án theo các bước rõ ràng.
+- Trạng thái từng ca kiểm thử phản ánh đúng việc đã chạy và có minh chứng tương ứng.
+- Các lỗi hiển thị trên màn hình nhỏ được ghi nhận và xử lý hoặc đưa vào danh sách tồn tại.
 
-- 14 ca kiểm tra thủ công chưa có log tự động hoặc ảnh chụp kết quả được lưu kèm repo. Các kết quả đó được ghi riêng là kiểm tra thủ công để phân biệt với 10 ca tự động.
-- Kết quả tự động hiện có gồm PHPUnit 21/21 ca, MySQL 14/14 ca và JavaScript 33/33 ca trên 4 tệp. Bản ghi JSON gốc của lần chạy MySQL chưa được lưu trong repo; tài liệu tổng hợp không thay thế log gốc.
-- Không chạy lại PHPUnit và kiểm thử MySQL trong môi trường hiện tại vì không có PHP, Composer hoặc MySQL.
-- Chưa có kiểm thử giao diện E2E hoặc đo tải qua Apache/máy chủ web. Phép đo hiện tại đi qua Laravel HTTP Kernel.
-- Phân tích yêu cầu chưa có buổi trao đổi với chủ sân thực tế; quy trình và chính sách nghiệp vụ trong báo cáo là mô hình giả định, chưa được xác nhận với người dùng thật.
-- Chưa có bằng chứng xác nhận giảng viên hướng dẫn đã được mời làm Collaborator. Cần kiểm tra đúng tài khoản GitHub và trạng thái lời mời.
-- Mã nguồn ban đầu được đưa vào repo trong một commit lớn. Các commit tài liệu và sửa lỗi gần đây theo Conventional Commits; các phần việc tiếp theo cần tiếp tục được chia thành commit nhỏ theo tuần.
+## 4. Khó khăn, vướng mắc dự kiến
 
-## Việc cần làm tiếp
+- Một số ca thanh toán cần dùng dữ liệu thử nghiệm và phải phân biệt rõ với giao dịch ngân hàng thật.
+- Kết quả thủ công cần được ghi chép đầy đủ để có thể đối chiếu khi nghiệm thu.
 
-- Lưu biên bản hoặc ảnh kết quả cho các ca kiểm tra thủ công nếu cần đưa bằng chứng bổ sung vào repo.
-- Kiểm thử Scheduler, SMTP và giao diện E2E; chỉ cập nhật trạng thái nghiệm thu sau khi có kết quả chạy.
-- Trao đổi với chủ sân thực tế, ghi ngày, vai trò người tham gia và nội dung xác nhận; cập nhật mô hình yêu cầu theo kết quả.
-- Xác minh tài khoản GitHub của giảng viên và hoàn tất lời mời Collaborator.
-- Tiếp tục cập nhật báo cáo tiến độ theo tuần và tạo commit Conventional Commits cho từng nhóm thay đổi.
+## 5. Kế hoạch tuần tiếp theo
+
+- Sửa các lỗi phát hiện trong quá trình kiểm thử.
+- Rà soát lại các chức năng chính trên giao diện và API.
