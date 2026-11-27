@@ -4,7 +4,7 @@
 * **Họ và tên:** Phùng Văn Đức
 * **Mã lớp:** DX23TT13
 * **Tên đồ án:** Website Đặt Sân Bóng Mini
-* **Giảng viên hướng dẫn:** Nguyễn Nhứt Lam
+* **Giảng viên hướng dẫn:** TS.Nguyễn Nhứt Lam
 * **Thời gian dự kiến:** 30/11/2026 – 06/12/2026
 ## 2. Công việc dự kiến
 
