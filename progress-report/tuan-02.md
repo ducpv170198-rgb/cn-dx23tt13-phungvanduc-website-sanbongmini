@@ -1,30 +1,36 @@
-# Báo cáo Tiến độ Đồ án - Tuần 02
+**Sinh viên:** Phùng Văn Đức  
+**Mã lớp:** DX23TT13  
+**Tên đồ án:** Website Đặt Sân Bóng Mini  
+**Giảng viên hướng dẫn:** TS.Nguyễn Nhứt Lam
 
-## 1. Thông tin sinh viên
-* **Họ và tên:** Phùng Văn Đức
-* **Mã lớp:** DX23TT13
-* **Tên đồ án:** Website Đặt Sân Bóng Mini
-* **Giảng viên hướng dẫn:** Nguyễn Nhứt Lam
-* **Giai đoạn:** 23/11/2026 – 29/11/2026
+## TUẦN 02 – XÂY DỰNG CÁC CHỨC NĂNG CỐT LÕI
 
-## 2. Công việc đã thực hiện trong tuần
-* [x] Xây dựng backend Laravel 12: REST API, Sanctum, phân quyền admin/staff/customer.
-* [x] Thiết kế và tạo migration CSDL MySQL; dữ liệu mẫu sân, bảng giá, dịch vụ.
-* [x] Cài đặt đặt sân có chống trùng lịch (giao dịch + khóa dòng), tính giá theo khung giờ.
-* [x] Cài đặt đặt cọc VietQR, ghi nhận thu/hoàn tiền lũy đẳng, hóa đơn, tồn kho dịch vụ.
-* [x] Xây dựng giao diện Vue 3 (đặt sân, đơn của tôi, giao hữu, quản trị).
-* [x] Viết 21 ca PHPUnit, 33 ca JavaScript và script tích hợp MySQL `kiemthu.php`.
-* Tình trạng mời giảng viên hướng dẫn làm Collaborator chưa có bằng chứng xác nhận; cần kiểm tra trạng thái repo và tài khoản GitHub của giảng viên.
+**Thời gian:** 23/11/2026 – 29/11/2026  
 
-## 3. Kết quả kiểm thử
-* PHPUnit: 21/21 ca đạt; JavaScript: 33/33 ca đạt.
-* Tích hợp MySQL: 14/14 ca đạt; môi trường và giới hạn được tổng hợp trong báo cáo, mục 4.5.3 và Phụ lục D.
+### 1. Công việc đã thực hiện
 
-## 4. Kế hoạch công việc cho tuần tiếp theo
-* [ ] Viết lại README, bổ sung hướng dẫn cài đặt và chạy kiểm thử.
-* [ ] Chạy thêm các kịch bản về tiền, hủy đơn và phân quyền (TC13–TC24) và lưu minh chứng.
-* [ ] Sửa giao diện quản trị trên điện thoại (tràn ngang ở 390 px).
-* [ ] Hoàn thiện báo cáo theo nhận xét: bìa, giãn dòng 1,5, tài liệu tham khảo IEEE.
+- Xây dựng backend bằng Laravel 12, gồm REST API, xác thực Sanctum và phân quyền admin/staff/customer.
+- Thiết kế và tạo migration cơ sở dữ liệu MySQL; bổ sung dữ liệu mẫu cho sân, bảng giá và dịch vụ.
+- Cài đặt chức năng đặt sân có kiểm tra trùng lịch bằng giao dịch và khóa dòng; tính giá theo khung giờ.
+- Cài đặt luồng đặt cọc VietQR, ghi nhận thu/hoàn tiền theo cơ chế lũy đẳng, lập hóa đơn và cập nhật tồn kho dịch vụ.
+- Xây dựng giao diện Vue 3 cho đặt sân, đơn của khách hàng, chức năng giao hữu và trang quản trị.
+- Viết 21 ca PHPUnit, 33 ca JavaScript và script kiểm thử tích hợp MySQL `kiemthu.php`.
 
-## 5. Khó khăn / Vướng mắc
-* Chưa có buổi trao đổi với chủ sân thực tế để xác nhận chính sách cọc và hoàn tiền.
+### 2. Kết quả kiểm thử
+
+- PHPUnit: 21/21 ca đạt.
+- JavaScript: 33/33 ca đạt.
+- Kiểm thử tích hợp MySQL: 14/14 ca đạt.
+- Môi trường và giới hạn của các lần kiểm thử được tổng hợp trong báo cáo đồ án, mục 4.5.3 và Phụ lục D.
+
+### 3. Khó khăn, vướng mắc
+
+- Cần tiếp tục đối chiếu các ca kiểm thử nghiệp vụ với kết quả mong đợi và lưu minh chứng theo từng ca.
+- Cần rà soát tính nhất quán giữa mã nguồn, tài liệu hướng dẫn và báo cáo.
+
+### 4. Kế hoạch tuần tiếp theo
+
+- Viết lại README, bổ sung hướng dẫn cài đặt và chạy kiểm thử.
+- Chạy thêm các kịch bản về tiền, hủy đơn và phân quyền (TC13–TC24), đồng thời lưu minh chứng.
+- Sửa giao diện quản trị trên điện thoại, tập trung lỗi tràn ngang ở độ rộng 390 px.
+- Hoàn thiện báo cáo theo nhận xét về bìa, giãn dòng 1,5 và tài liệu tham khảo IEEE.
