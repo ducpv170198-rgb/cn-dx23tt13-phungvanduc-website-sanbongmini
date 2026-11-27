@@ -1,23 +1,35 @@
 # Báo cáo Tiến độ Đồ án - Tuần 01
 
-## 1. Thông tin sinh viên
+## Thông tin sinh viên
 * **Họ và tên:** Phùng Văn Đức
 * **Mã lớp:** DX23TT13
 * **Tên đồ án:** Website Đặt Sân Bóng Mini
 * **Giảng viên hướng dẫn:** Nguyễn Nhứt Lam
 
-## 2. Công việc đã thực hiện trong tuần
-* [x] Tạo GitHub Repository theo đúng cú pháp quy định (`cn-dx23tt13-phungvanduc-website-sanbongmini`).
-* [ ] Cài đặt và cấu hình quyền truy cập (mời Giảng viên hướng dẫn làm Collaborator trong tuần đầu tiên).
-* [x] Khởi tạo tệp tin `README.md` với mô tả tổng quan đề tài, công nghệ sử dụng (Laravel 12, MySQL) và danh sách các tính năng dự kiến.
-* [x] Tạo cấu trúc thư mục `progress-report/` và hoàn thành báo cáo tuần 01.
-* [x] Lên ý tưởng thiết kế cơ sở dữ liệu (Database Schema) gồm các bảng cốt lõi: Users, SanBong, KhungGio, DatSan, ThanhToan.
+## TUẦN 01 – KHỞI ĐỘNG VÀ XÁC ĐỊNH PHẠM VI
 
-## 3. Kế hoạch công việc cho tuần tiếp theo
-* [ ] Cài đặt môi trường Laravel 12 và cấu hình kết nối cơ sở dữ liệu trên máy cá nhân.
-* [ ] Viết các Migration và Model cho bảng người dùng (`Users`), bảng sân bóng (`SanBong`) và bảng khung giờ (`KhungGio`).
-* [ ] Xây dựng giao diện trang chủ và trang danh sách sân bóng cho khách hàng.
-* [ ] Thực hiện commit mã nguồn lên GitHub kèm theo thông điệp commit chuẩn (Conventional Commits).
+**Thời gian:** 16/11/2026 – 22/11/2026  
+**Trạng thái:** Bản nháp, cần xác nhận theo tiến độ thực tế.
 
-## 4. Khó khăn / Vướng mắc (nếu có)
-* *Chưa có.* 
+### 1. Công việc
+
+- Tìm hiểu bài toán quản lý lịch đặt sân bóng đá mini và xác định các nhóm người dùng chính: khách hàng, nhân viên và quản trị viên.
+- Xác định phạm vi chức năng dự kiến: xem lịch sân, đặt sân, quản lý đơn, tính tiền và cọc, dịch vụ đi kèm, quản trị và thống kê.
+- Khảo sát công nghệ phù hợp cho đồ án; dự kiến sử dụng Laravel, Vue.js và MySQL.
+- Phác thảo cấu trúc dữ liệu ban đầu cho sân, khung giờ, đơn đặt, hóa đơn và dịch vụ.
+- Khởi tạo cấu trúc dự án và lập danh sách công việc cần triển khai.
+
+### 2. Kết quả dự kiến
+
+- Có phạm vi chức năng ban đầu và hướng công nghệ để triển khai.
+- Có danh sách các thành phần dữ liệu và chức năng cần hoàn thiện trong các tuần tiếp theo.
+
+### 3. Khó khăn, vướng mắc
+
+- Cần làm rõ quy tắc giá theo loại sân, ngày thường/cuối tuần, khung giờ và quy trình xử lý đơn.
+- Cần xác định cách ngăn hai khách hàng đặt trùng cùng sân và thời gian.
+
+### 4. Kế hoạch tuần tiếp theo
+
+- Xây dựng API, cơ sở dữ liệu và giao diện chính.
+- Triển khai luồng đặt sân, tính giá và phân quyền người dùng.
