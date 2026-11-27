@@ -1,0 +1,699 @@
+{
+    "run": "20261127_140348_5baf9b57",
+    "database": "fieldly_qa_20261127_140348_5baf9b57",
+    "mode": "Laravel HTTP kernel, independent PHP processes; no Apache\/network transport",
+    "php": "8.4.27",
+    "cases": [
+        {
+            "id": "TN01",
+            "pass": true,
+            "detail": {
+                "http_status": [
+                    201,
+                    422
+                ],
+                "rows": 1,
+                "responses": [
+                    {
+                        "status": 201,
+                        "ms": 145.304,
+                        "body": {
+                            "message": "Đã tạo đơn, chờ quản lý xác nhận.",
+                            "data": {
+                                "id": 1,
+                                "booking_code": "FD261127E1KPUB4L1VOZ",
+                                "pitch_id": 1,
+                                "recurring_series_id": null,
+                                "customer_id": null,
+                                "customer_name": "QA synthetic",
+                                "customer_phone": "0900000000",
+                                "customer_email": null,
+                                "start_at": "2026-11-29 06:00:00",
+                                "end_at": "2026-11-29 07:00:00",
+                                "status": "pending",
+                                "source": "web",
+                                "note": null,
+                                "pitch_price": "220000.00",
+                                "service_total": "0.00",
+                                "total_amount": "220000.00",
+                                "created_by": null,
+                                "created_at": "2026-11-27 21:03:52",
+                                "updated_at": "2026-11-27 21:03:52",
+                                "stock_restored_at": null,
+                                "cancelled_at": null
+                            },
+                            "deposit": null,
+                            "deposit_notice": null
+                        }
+                    },
+                    {
+                        "status": 422,
+                        "ms": 91.781,
+                        "body": {
+                            "message": "Khung giờ đã được đặt.",
+                            "errors": {
+                                "start_at": [
+                                    "Khung giờ đã được đặt."
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "TN03",
+            "pass": true,
+            "detail": {
+                "http_status": [
+                    422,
+                    422,
+                    422,
+                    201,
+                    422,
+                    422,
+                    422,
+                    422,
+                    422,
+                    422
+                ],
+                "rows": 1,
+                "responses": [
+                    {
+                        "status": 422,
+                        "ms": 193.471,
+                        "body": {
+                            "message": "Khung giờ đã được đặt.",
+                            "errors": {
+                                "start_at": [
+                                    "Khung giờ đã được đặt."
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "status": 422,
+                        "ms": 210.219,
+                        "body": {
+                            "message": "Khung giờ đã được đặt.",
+                            "errors": {
+                                "start_at": [
+                                    "Khung giờ đã được đặt."
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "status": 422,
+                        "ms": 201.982,
+                        "body": {
+                            "message": "Khung giờ đã được đặt.",
+                            "errors": {
+                                "start_at": [
+                                    "Khung giờ đã được đặt."
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "status": 201,
+                        "ms": 182.026,
+                        "body": {
+                            "message": "Đã tạo đơn, chờ quản lý xác nhận.",
+                            "data": {
+                                "id": 2,
+                                "booking_code": "FD261127OQQT3JRY0HVP",
+                                "pitch_id": 1,
+                                "recurring_series_id": null,
+                                "customer_id": null,
+                                "customer_name": "QA synthetic",
+                                "customer_phone": "0900000000",
+                                "customer_email": null,
+                                "start_at": "2026-11-29 08:00:00",
+                                "end_at": "2026-11-29 09:00:00",
+                                "status": "pending",
+                                "source": "web",
+                                "note": null,
+                                "pitch_price": "220000.00",
+                                "service_total": "0.00",
+                                "total_amount": "220000.00",
+                                "created_by": null,
+                                "created_at": "2026-11-27 21:03:53",
+                                "updated_at": "2026-11-27 21:03:53",
+                                "stock_restored_at": null,
+                                "cancelled_at": null
+                            },
+                            "deposit": null,
+                            "deposit_notice": null
+                        }
+                    },
+                    {
+                        "status": 422,
+                        "ms": 202.481,
+                        "body": {
+                            "message": "Khung giờ đã được đặt.",
+                            "errors": {
+                                "start_at": [
+                                    "Khung giờ đã được đặt."
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "status": 422,
+                        "ms": 208.961,
+                        "body": {
+                            "message": "Khung giờ đã được đặt.",
+                            "errors": {
+                                "start_at": [
+                                    "Khung giờ đã được đặt."
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "status": 422,
+                        "ms": 208.437,
+                        "body": {
+                            "message": "Khung giờ đã được đặt.",
+                            "errors": {
+                                "start_at": [
+                                    "Khung giờ đã được đặt."
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "status": 422,
+                        "ms": 214.171,
+                        "body": {
+                            "message": "Khung giờ đã được đặt.",
+                            "errors": {
+                                "start_at": [
+                                    "Khung giờ đã được đặt."
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "status": 422,
+                        "ms": 187.392,
+                        "body": {
+                            "message": "Khung giờ đã được đặt.",
+                            "errors": {
+                                "start_at": [
+                                    "Khung giờ đã được đặt."
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "status": 422,
+                        "ms": 194.829,
+                        "body": {
+                            "message": "Khung giờ đã được đặt.",
+                            "errors": {
+                                "start_at": [
+                                    "Khung giờ đã được đặt."
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "TN02",
+            "pass": true,
+            "detail": [
+                {
+                    "status": 201,
+                    "ms": 75.088,
+                    "body": {
+                        "message": "Đã tạo đơn, chờ quản lý xác nhận.",
+                        "data": {
+                            "id": 4,
+                            "booking_code": "FD261127OAVCLNAIKHIY",
+                            "pitch_id": 1,
+                            "recurring_series_id": null,
+                            "customer_id": null,
+                            "customer_name": "QA synthetic",
+                            "customer_phone": "0900000000",
+                            "customer_email": null,
+                            "start_at": "2026-11-29 10:00:00",
+                            "end_at": "2026-11-29 11:00:00",
+                            "status": "pending",
+                            "source": "web",
+                            "note": null,
+                            "pitch_price": "220000.00",
+                            "service_total": "0.00",
+                            "total_amount": "220000.00",
+                            "created_by": null,
+                            "created_at": "2026-11-27 21:03:53",
+                            "updated_at": "2026-11-27 21:03:53",
+                            "stock_restored_at": null,
+                            "cancelled_at": null
+                        },
+                        "deposit": null,
+                        "deposit_notice": null
+                    }
+                },
+                {
+                    "status": 201,
+                    "ms": 69.549,
+                    "body": {
+                        "message": "Đã tạo đơn, chờ quản lý xác nhận.",
+                        "data": {
+                            "id": 3,
+                            "booking_code": "FD261127BA5AEZVMEKVW",
+                            "pitch_id": 1,
+                            "recurring_series_id": null,
+                            "customer_id": null,
+                            "customer_name": "QA synthetic",
+                            "customer_phone": "0900000000",
+                            "customer_email": null,
+                            "start_at": "2026-11-29 11:00:00",
+                            "end_at": "2026-11-29 12:00:00",
+                            "status": "pending",
+                            "source": "web",
+                            "note": null,
+                            "pitch_price": "220000.00",
+                            "service_total": "0.00",
+                            "total_amount": "220000.00",
+                            "created_by": null,
+                            "created_at": "2026-11-27 21:03:53",
+                            "updated_at": "2026-11-27 21:03:53",
+                            "stock_restored_at": null,
+                            "cancelled_at": null
+                        },
+                        "deposit": null,
+                        "deposit_notice": null
+                    }
+                }
+            ]
+        },
+        {
+            "id": "TN04",
+            "pass": true,
+            "detail": {
+                "rows": 1,
+                "responses": [
+                    {
+                        "status": 201,
+                        "ms": 213.763,
+                        "body": {
+                            "id": 1,
+                            "replayed": false,
+                            "net_paid": 10000
+                        }
+                    },
+                    {
+                        "status": 200,
+                        "ms": 214.8,
+                        "body": {
+                            "id": 1,
+                            "replayed": true
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "TN09-idempotency-conflict",
+            "pass": true,
+            "detail": {
+                "response": [
+                    {
+                        "status": 422,
+                        "ms": 75.65,
+                        "body": {
+                            "message": "Khóa đã được dùng với nội dung khác.",
+                            "errors": {
+                                "idempotency_key": [
+                                    "Khóa đã được dùng với nội dung khác."
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "TN10-paid-cancel-blocked",
+            "pass": true,
+            "detail": {
+                "response": [
+                    {
+                        "status": 422,
+                        "ms": 57.004,
+                        "body": {
+                            "message": "Đơn đã thu tiền; hãy hoàn tiền trước khi hủy.",
+                            "errors": {
+                                "payment": [
+                                    "Đơn đã thu tiền; hãy hoàn tiền trước khi hủy."
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "TN04-refund",
+            "pass": true,
+            "detail": {
+                "net": 0,
+                "response": [
+                    {
+                        "status": 201,
+                        "ms": 59.122,
+                        "body": {
+                            "id": 2,
+                            "replayed": false,
+                            "net_paid": 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "TN05",
+            "pass": true,
+            "detail": {
+                "stock_before": 100,
+                "stock_after": 100,
+                "restore_rows": 1,
+                "responses": [
+                    {
+                        "status": 200,
+                        "ms": 61.244,
+                        "body": {
+                            "already_cancelled": false,
+                            "booking_id": 5
+                        }
+                    },
+                    {
+                        "status": 200,
+                        "ms": 2.648,
+                        "body": {
+                            "already_cancelled": true,
+                            "booking_id": 5
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "TN08",
+            "pass": true,
+            "detail": [
+                {
+                    "status": 403,
+                    "ms": 69.289,
+                    "body": {
+                        "message": "Bạn không có quyền truy cập."
+                    }
+                }
+            ]
+        },
+        {
+            "id": "TN11-roles",
+            "pass": true,
+            "detail": {
+                "statuses": [
+                    401,
+                    403,
+                    200,
+                    200
+                ]
+            }
+        },
+        {
+            "id": "TN12-recurring-cancel",
+            "pass": true,
+            "detail": {
+                "statuses": [
+                    "confirmed",
+                    "confirmed",
+                    "cancelled"
+                ],
+                "response": [
+                    {
+                        "status": 200,
+                        "ms": 54.288,
+                        "body": {
+                            "cancelled": 1,
+                            "booking_ids": [
+                                8
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "TN13-lifecycle",
+            "pass": true,
+            "detail": {
+                "statuses": [
+                    "completed",
+                    "confirmed",
+                    "cancelled"
+                ],
+                "output": "Đã chuyển 1 đơn sang Hoàn tất.\r\n",
+                "fixture_note": "Invoice paid status set directly to isolate lifecycle command"
+            }
+        },
+        {
+            "id": "TN06",
+            "pass": true,
+            "detail": {
+                "requests": 200,
+                "workers": 10,
+                "pitches": 5,
+                "fixture_bookings": 200,
+                "fixture_days": 30,
+                "p95_ms": 120.61,
+                "min_ms": 99.532,
+                "max_ms": 194.453,
+                "errors": 0,
+                "samples_ms": [
+                    99.532,
+                    100.147,
+                    100.201,
+                    100.524,
+                    100.606,
+                    100.842,
+                    100.961,
+                    100.979,
+                    101.174,
+                    101.222,
+                    101.228,
+                    101.266,
+                    101.283,
+                    101.3,
+                    101.444,
+                    101.478,
+                    101.512,
+                    101.672,
+                    101.847,
+                    101.941,
+                    101.942,
+                    101.969,
+                    102.045,
+                    102.067,
+                    102.075,
+                    102.174,
+                    102.265,
+                    102.274,
+                    102.318,
+                    102.322,
+                    102.395,
+                    102.415,
+                    102.466,
+                    102.644,
+                    102.709,
+                    102.743,
+                    102.749,
+                    102.785,
+                    102.885,
+                    102.902,
+                    102.914,
+                    102.916,
+                    102.964,
+                    102.975,
+                    103.006,
+                    103.012,
+                    103.018,
+                    103.073,
+                    103.076,
+                    103.085,
+                    103.138,
+                    103.199,
+                    103.218,
+                    103.386,
+                    103.42,
+                    103.43,
+                    103.438,
+                    103.499,
+                    103.548,
+                    103.591,
+                    103.593,
+                    103.729,
+                    103.752,
+                    103.816,
+                    103.875,
+                    103.999,
+                    103.999,
+                    104.027,
+                    104.046,
+                    104.047,
+                    104.101,
+                    104.133,
+                    104.143,
+                    104.19,
+                    104.255,
+                    104.34,
+                    104.443,
+                    104.508,
+                    104.537,
+                    104.545,
+                    104.583,
+                    104.601,
+                    104.606,
+                    104.615,
+                    104.622,
+                    104.631,
+                    104.646,
+                    104.659,
+                    104.729,
+                    104.779,
+                    104.795,
+                    104.875,
+                    104.879,
+                    104.916,
+                    104.957,
+                    105.123,
+                    105.17,
+                    105.194,
+                    105.197,
+                    105.206,
+                    105.219,
+                    105.308,
+                    105.401,
+                    105.415,
+                    105.528,
+                    105.786,
+                    105.793,
+                    105.875,
+                    105.911,
+                    106.095,
+                    106.183,
+                    106.19,
+                    106.222,
+                    106.23,
+                    106.346,
+                    106.361,
+                    106.445,
+                    106.491,
+                    106.493,
+                    106.553,
+                    106.594,
+                    106.628,
+                    106.761,
+                    106.772,
+                    106.844,
+                    106.927,
+                    106.942,
+                    106.968,
+                    106.987,
+                    107.092,
+                    107.117,
+                    107.149,
+                    107.201,
+                    107.296,
+                    107.303,
+                    107.364,
+                    107.39,
+                    107.461,
+                    107.489,
+                    107.722,
+                    107.824,
+                    107.847,
+                    107.953,
+                    108.002,
+                    108.122,
+                    108.262,
+                    108.377,
+                    108.388,
+                    108.584,
+                    108.629,
+                    108.648,
+                    108.656,
+                    108.975,
+                    109.019,
+                    109.142,
+                    109.201,
+                    109.267,
+                    109.428,
+                    109.468,
+                    109.487,
+                    109.489,
+                    109.509,
+                    109.527,
+                    109.571,
+                    109.861,
+                    109.965,
+                    110.451,
+                    110.522,
+                    110.553,
+                    110.688,
+                    110.898,
+                    111.362,
+                    111.369,
+                    111.519,
+                    112.124,
+                    112.171,
+                    112.44,
+                    113.029,
+                    113.101,
+                    113.239,
+                    114.217,
+                    114.28,
+                    114.406,
+                    114.461,
+                    114.836,
+                    115.688,
+                    116.974,
+                    117.637,
+                    117.737,
+                    120.61,
+                    184.212,
+                    184.345,
+                    185.211,
+                    186.895,
+                    187.406,
+                    188.015,
+                    189.987,
+                    190.526,
+                    193.807,
+                    194.453
+                ]
+            }
+        },
+        {
+            "id": "TN07-integrity",
+            "pass": true,
+            "detail": {
+                "overlaps": 0,
+                "missing_invoices": 0,
+                "invoice_mismatches": 0,
+                "note": "Snapshot after workload; not a long-duration soak test"
+            }
+        }
+    ],
+    "os": "Windows",
+    "script_sha256": "13c28e08e6842d9ae4bcdc64d56ad0ba7f2661c00e33403c1a57a4a4961f1d55",
+    "mysql": "8.0.30",
+    "completed": true
+}
