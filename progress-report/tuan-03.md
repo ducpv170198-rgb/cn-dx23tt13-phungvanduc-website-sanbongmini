@@ -1,25 +1,32 @@
-# Báo cáo tiến độ tuần 03
+**Sinh viên:** Phùng Văn Đức  
+**Mã lớp:** DX23TT13  
+**Tên đồ án:** Website Đặt Sân Bóng Mini  
+**Giảng viên hướng dẫn:** TS.Nguyễn Nhứt Lam
 
-**Ngày cập nhật:** 27/11/2026
-**Đề tài:** Xây dựng website đặt sân bóng đá mini
+## TUẦN 03 – HOÀN THIỆN HƯỚNG DẪN VÀ KIỂM TRA NGHIỆP VỤ
 
-## Công việc đã thực hiện
+**Thời gian:** 30/11/2026 – 06/12/2026  
 
-- Rà soát README, mã nguồn và nội dung báo cáo kiểm thử để thống nhất phạm vi chức năng và kết quả.
-- Chạy `php artisan test` trên Windows/Laragon, PHP 8.4.27: **21 ca đạt, 93 assertions**; kết quả được lưu bằng ảnh chụp trong `docs/kiemthu/evidence/`.
-- Chạy `php kiemthu.php` trên Windows/Laragon với MySQL 8.0.30 và cơ sở dữ liệu QA: **14/14 ca đạt**. Bản ghi JSON gốc được lưu tại `docs/kiemthu/mysql-2026-11-27.json`; ảnh chụp kết quả được lưu cùng thư mục minh chứng.
-- Đối chiếu Phụ lục C với bộ kiểm thử: 28 kịch bản được chia thành 10 ca có kết quả tự động và 18 ca kiểm tra thủ công. Các ca thủ công được báo cáo đạt nhưng chưa lưu ảnh hoặc biên bản kết quả theo từng ca.
-- Giữ kết quả JavaScript riêng: 4 tệp kiểm thử, 33/33 ca đạt trên Node.js 24.22.3; `package.json` yêu cầu Node.js từ phiên bản 22.
+### 1. Công việc dự kiến
 
-## Tồn tại
+- Hoàn thiện README với yêu cầu môi trường, các bước cài đặt, cấu hình `.env`, tạo cơ sở dữ liệu và chạy dự án.
+- Bổ sung hướng dẫn chạy PHPUnit, kiểm thử JavaScript và script tích hợp MySQL.
+- Rà soát các kịch bản TC13–TC24 liên quan đến xác nhận đơn, thanh toán, hủy đơn, hoàn tiền và phân quyền.
+- Ghi lại dữ liệu đầu vào, kết quả mong đợi, kết quả thực tế và minh chứng cho từng ca đã thực hiện.
+- Kiểm tra lại giao diện quản trị ở kích thước màn hình rộng 390 px.
 
-- Chưa có khảo sát hoặc phỏng vấn chủ sân; quy trình và yêu cầu nghiệp vụ hiện được xây dựng theo mô hình giả định, tài liệu công khai và phạm vi đề tài.
-- 18 kịch bản kiểm tra thủ công chưa có bằng chứng riêng theo từng ca, gồm các luồng báo giá, tồn kho, tiền cọc, xác nhận đơn, đặt chuỗi và phân quyền đăng ký.
-- Chưa có kiểm thử giao diện E2E hoặc phép đo tải qua Apache/máy chủ web. VietQR mới hỗ trợ hướng dẫn chuyển khoản; hệ thống chưa tự đối soát với ngân hàng.
+### 2. Kết quả cần đạt
 
-## Việc cần làm tiếp
+- README có thể dùng để cài đặt và chạy dự án theo các bước rõ ràng.
+- Trạng thái từng ca kiểm thử phản ánh đúng việc đã chạy và có minh chứng tương ứng.
+- Các lỗi hiển thị trên màn hình nhỏ được ghi nhận và xử lý hoặc đưa vào danh sách tồn tại.
 
-- Lưu ảnh chụp hoặc biên bản ngắn cho từng ca kiểm thử thủ công quan trọng, gồm dữ liệu đầu vào và kết quả thực tế.
-- Tổ chức trao đổi với chủ sân để xác nhận quy tắc báo giá, tiền cọc, hủy và hoàn tiền; cập nhật ngày, vai trò người trao đổi và nội dung đã xác nhận vào mục 1.3 khi có kết quả.
-- Kiểm tra Scheduler, SMTP và luồng giao diện E2E; chỉ bổ sung kết luận sau khi có kết quả chạy.
-- Tiếp tục rà soát tính nhất quán giữa repo, báo cáo, bảng kịch bản và minh chứng.
+### 3. Khó khăn, vướng mắc dự kiến
+
+- Một số ca thanh toán cần dùng dữ liệu thử nghiệm và phải phân biệt rõ với giao dịch ngân hàng thật.
+- Kết quả thủ công cần được ghi chép đầy đủ để có thể đối chiếu khi nghiệm thu.
+
+### 4. Kế hoạch tuần tiếp theo
+
+- Sửa các lỗi phát hiện trong quá trình kiểm thử.
+- Rà soát lại các chức năng chính trên giao diện và API.
